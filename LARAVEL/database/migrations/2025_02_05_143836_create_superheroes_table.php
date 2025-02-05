@@ -13,17 +13,15 @@ return new class extends Migration
     {
         Schema::create('superheroes', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('pseudo')->unique();
-            $table->string('gender');
-            $table->string('planet_origin')->nullable();
-            $table->text('description')->nullable();
-            $table->json('superpowers')->nullable();
-            $table->string('protection_city')->nullable();
-            $table->json('gadgets')->nullable();
-            $table->string('team')->nullable();
-            $table->string('vehicle')->nullable();
-            $table->timestamps();
+        $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+        $table->string('nom_reel');
+        $table->string('pseudo')->unique();
+        $table->enum('sexe', ['Homme', 'Femme', 'Autre']);
+        $table->text('description')->nullable();
+        $table->foreignId('ville_protection_id')->nullable()->constrained('villes')->onDelete('set null');
+        $table->foreignId('planete_origine_id')->nullable()->constrained('planetes')->onDelete('set null');
+        $table->foreignId('equipe_id')->nullable()->constrained('equipes')->onDelete('set null');
+        $table->timestamps();
         });
     }
 
