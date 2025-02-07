@@ -50,6 +50,13 @@ header {
     filter: grayscale(100%);
 }
 
+.search-icon {
+    position: relative;
+    width: 25px;
+    top: 29px;
+    left: 615px;
+}
+
 .search-bar {
     display: flex;
     padding: 0.5rem 1rem;
@@ -58,14 +65,16 @@ header {
     height: 50px;
     margin: 0 auto; 
     align-self: center;
+    color: #ebebeb;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #aaa;
-    border-radius: 4px;
+    padding: 0.5rem 2.5rem; /* Adjusted padding for better placeholder positioning */
+    border: none;
+    border-radius: 20px;
     align-self: center;
+    background-color: #e7e7e7;
 }
 
 .account-btn {
@@ -80,9 +89,9 @@ header {
 
 .sidebar {
     position: fixed;
-    top: 80px;
+    top: 78px;
     left: 0;
-    height: calc(100% - 60px);
+    height: calc(100% - 180px);
     width: 80px;
     background-color: #ccc;
     transition: width 0.3s;
@@ -91,6 +100,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-bottom-right-radius: 40px;
 }
 
 .sidebar:hover {
@@ -117,19 +127,26 @@ header {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 20px;
     gap: 40px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    background-color: #ccc;
+    width: 950px;
+    height: 750px;
+    justify-content: center;
 }
 
 .hero-wrapper {
     display: flex;
     align-items: stretch;
-    border: 3px solid #000;
-    background: rgba(255, 255, 255, 0.8);
     width: 900px;
-    height: 600px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    height: 700px;
+    gap: 20px;
 }
 
 .hero-frame {
@@ -139,24 +156,26 @@ header {
     justify-content: center;
     align-items: center;
     padding: 15px;
-    border-right: 3px solid #000;
+    border: 3px solid #000; /* Updated border */
 }
 
 .hero-frame img {
-    width: 170%;
+    width: 220%;
     height: auto;
     display: block;
     margin-top: 40px;
-    margin-left: 80px;
+    margin-left: 150px;
 }
 
 .hero-description {
     flex: 1;
     display: flex;
     justify-content: center;
+    width: 45%;
     align-items: center;
     padding: 20px;
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    border: 3px solid #000; /* Updated border */
 }
