@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'SuperHeros')</title>
 
+    <!-- Lien vers les fichiers CSS -->
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hero_editor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/new_hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+            </a>
         </div>
         <div class="search-bar">
             <input type="text" placeholder="search bar">
@@ -21,10 +27,13 @@
         <button class="account-btn">account</button>
     </header>
 
+    <!-- Barre de navigation avec liens vers les pages -->
     <nav class="sidebar">
-        <div class="icon">icons</div>
-        <div class="icon">icons</div>
-        <div class="icon">icons</div>
+        <a href="{{ url('/') }}" class="icon">🏠 Accueil</a>
+        <a href="{{ url('/profile') }}" class="icon">👤 Profil</a>
+        <a href="{{ url('/hero-editor') }}" class="icon">🛠 Éditeur</a>
+        <a href="{{ url('/new-hero') }}" class="icon">✨ Nouveau Héros</a>
+        <a href="{{ url('/superheros') }}" class="icon">🦸 Liste des Héros</a>
     </nav>
 
     <main>
