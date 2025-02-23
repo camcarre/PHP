@@ -5,16 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Superhero extends Model {
+class Superhero extends Model
+{
     use HasFactory;
 
     protected $fillable = [
-        'pseudo',
+        'user_id',
         'nom_reel',
-        'planete_origine',
-        'pouvoirs',
-        'ville_protegee',
+        'pseudo',
+        'sexe',
         'description',
-        'image'
+        'ville_protection_id',
+        'planete_origine_id',
+        'equipe_id'
     ];
 }

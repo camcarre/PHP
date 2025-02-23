@@ -26,4 +26,3 @@ Route::get('/profile', function () {
 
 Route::resource('superheros', SuperheroController::class);
 
-

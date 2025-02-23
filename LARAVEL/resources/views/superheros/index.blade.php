@@ -1,22 +1,42 @@
 @extends('layouts.app')
 
-@section('title', 'Liste des SuperHéros')
+@section('title', 'Liste des Super-Héros')
 
 @section('content')
+<div class="container">
     <h1>Liste des Super-Héros</h1>
-    <a href="{{ route('superheros.create') }}">Créer un nouveau Super-Héros</a>
 
-    <ul>
-        @foreach ($superheroes as $hero)
-            <li>
-                <a href="{{ route('superheros.show', $hero->id) }}">{{ $hero->pseudo }}</a>
-                <a href="{{ route('superheros.edit', $hero->id) }}">✏ Modifier</a>
-                <form action="{{ route('superheros.destroy', $hero->id) }}" method="POST" style="display:inline;">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">🗑 Supprimer</button>
-                </form>
-            </li>
-        @endforeach
-    </ul>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    <a href="{{ route('superheros.create') }}">Créer un SuperHéros</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Pseudo</th>
+                <th>Nom Réel</th>
+                <th>Sexe</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($heroes as $hero)
+                <tr>
+                    <td>{{ $hero->pseudo }}</td>
+                    <td>{{ $hero->nom_reel }}</td>
+                    <td>{{ $hero->sexe }}</td>
+                    <td>{{ $hero->description }}</td>
+                    <td>
+                        <a href="#" class="btn btn-info">Voir</a>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
 @endsection
