@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'SuperHeros')</title>
-
-    <!-- Lien vers les fichiers CSS -->
     <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hero_editor.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -26,8 +24,6 @@
         </div>
         <button class="account-btn">account</button>
     </header>
-
-    <!-- Barre de navigation avec liens vers les pages -->
     <nav class="sidebar">
         <a href="{{ url('/') }}" class="icon">🏠 Accueil</a>
         <a href="{{ url('/profile') }}" class="icon">👤 Profil</a>
