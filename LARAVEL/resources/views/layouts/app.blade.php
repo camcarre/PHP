@@ -35,7 +35,7 @@
           </a>
         </li>
         <li>
-          <a href="{{ url('/hero-editor') }}" class="icon">
+          <a href="{{ url('/editor') }}" class="icon">
             <span class="icon-symbol">🛠</span>
             <span class="icon-text">Éditeur</span>
           </a>
