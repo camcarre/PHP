@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil - SuperHeros</title>
+  <title>@yield('title', 'SuperHeros')</title>
   <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
 </head>
 <body>
@@ -57,17 +57,7 @@
   </aside>
 
   <main>
-    <section class="home-container">
-      <article class="hero-wrapper">
-        <figure class="hero-frame">
-          <img src="{{ asset('images/hero1.webp') }}" alt="Super-Héros">
-        </figure>
-        <div class="hero-description">
-          <p>Bienvenue dans l'univers des héros !</p>
-        </div>
-      </article>
-    </section>
+    @yield('content')
   </main>
-  
 </body>
 </html>
