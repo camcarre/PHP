@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('superheros.layout')
 
 @section('title', 'Inscription')
 
 @section('content')
 <div class="container">
     <h2>Inscription</h2>
-    <form action="{{ route('register') }}" method="POST">
+    <form action="{{ route('register.post') }}" method="POST">
         @csrf
         <label>Nom</label>
         <input type="text" name="nom" required>
