@@ -9,7 +9,7 @@ class SuperheroController extends Controller
 {
     public function create()
     {
-        return view('superheros.create');
+        return view('new_hero');
     }
 
     public function store(Request $request)
@@ -32,7 +32,7 @@ class SuperheroController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect()->route('superheros.index')->with('success', 'Super-héros créé avec succès !');
+        return redirect()->route('superheros.index')->with('success', 'Super-héros créé avec succès!');
     }
 
     public function index()
