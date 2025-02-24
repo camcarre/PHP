@@ -9,6 +9,8 @@ class Superhero extends Model
 {
     use HasFactory;
 
+    protected $table = 'superheros';
+
     protected $fillable = [
         'pseudo',
         'nom_reel',
@@ -16,6 +18,5 @@ class Superhero extends Model
         'pouvoirs',
         'ville_protegee',
         'description',
-        'image'
     ];
 }

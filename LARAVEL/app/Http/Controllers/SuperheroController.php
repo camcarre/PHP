@@ -22,12 +22,7 @@ class SuperheroController extends Controller
             'pouvoirs' => 'required|string|max:255',
             'ville_protegee' => 'required|string|max:100',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048'
         ]);
-
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('heroes', 'public');
-        }
 
         Superhero::create([
             'pseudo' => $request->pseudo,
@@ -36,7 +31,6 @@ class SuperheroController extends Controller
             'pouvoirs' => $request->pouvoirs,
             'ville_protegee' => $request->ville_protegee,
             'description' => $request->description,
-            'image' => $imagePath ?? null
         ]);
 
         return redirect()->route('superheros.index')
