@@ -3,14 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SuperheroController;
 
-
 Route::get('/', function () {
     return view('accueil');
 });
 
-Route::get('/editor', function () {
-    return view('editor');
-});
+Route::get('/editor', [SuperheroController::class, 'editor'])->name('editor');
 
 Route::get('/cards', function () {
     return view('cards');
@@ -23,4 +20,3 @@ Route::get('/profile', function () {
 });
 
 Route::resource('superheros', SuperheroController::class);
-

@@ -6,11 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-     background: url("/photo/background.png") no-repeat center center fixed;
+    background: url("/photo/background.png") no-repeat center center fixed;
     background-size: cover;
 }
 
- header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,13 +24,13 @@ body {
     font-size: 1.2rem;
 }
 
- .logo img {
+.logo img {
     height: 40px;
     filter: grayscale(250%);
     transition: filter 0.3s ease;
 }
 
- .logo img:hover {
+.logo img:hover {
     filter: grayscale(0%);
 }
 
@@ -56,7 +56,7 @@ body {
     cursor: pointer;
 }
 
- .sidebar {
+.sidebar {
     position: fixed;
     top: 60px;
     left: 0;
@@ -68,11 +68,11 @@ body {
     z-index: 999;
 }
 
- .sidebar:hover {
+.sidebar:hover {
     width: 200px;
 }
 
- .sidebar .icon {
+.sidebar .icon {
     color: #fff;
     text-align: center;
     margin: 1rem 0;
@@ -85,12 +85,12 @@ body {
     border-radius: 5px;
 }
 
- main {
+main {
     margin-left: 50px;
     padding: 1rem;
 }
 
- .cards-container {
+.cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -98,7 +98,7 @@ body {
     padding: 1rem 0;
 }
 
- .card {
+.card {
     position: relative;
     width: 270px;
     height: 350px;
@@ -112,7 +112,7 @@ body {
     overflow: hidden;
 }
 
- .card::before {
+.card::before {
     content: "";
     position: absolute;
     top: 0;
@@ -124,7 +124,7 @@ body {
     opacity: 0.2;
 }
 
- .card img {
+.card img {
     width: 90%;
     max-width: 250px;
     height: auto;
@@ -134,7 +134,7 @@ body {
     margin: 0.5rem auto;
 }
 
- .card-info {
+.card-info {
     width: 100%;
     text-align: center;
     padding: 0.5rem 0;

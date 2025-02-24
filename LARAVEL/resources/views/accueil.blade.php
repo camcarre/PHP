@@ -10,7 +10,7 @@
   <header>
     <div class="logo">
       <a href="{{ url('/') }}">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo-img">
+        <img src="/photo/logo.png" alt="Logo" class="logo-img">
       </a>
     </div>
     <div class="search-bar">
@@ -20,8 +20,7 @@
   </header>
 
   <aside class="sidebar">
-    <nav>
-      <ul>
+  <ul>
         <li>
           <a href="{{ url('/') }}" class="icon">
             <span class="icon-symbol">🏠</span>
@@ -35,9 +34,9 @@
           </a>
         </li>
         <li>
-          <a href="{{ url('/hero-editor') }}" class="icon">
-            <span class="icon-symbol">🛠</span>
-            <span class="icon-text">Éditeur</span>
+          <a href="{{ url('/editor') }}" class="icon">
+            <span class="icon-symbol">🦸</span>
+            <span class="icon-text">Liste des Héros</span>
           </a>
         </li>
         <li>
@@ -46,14 +45,8 @@
             <span class="icon-text">Nouveau Héros</span>
           </a>
         </li>
-        <li>
-          <a href="{{ url('/superheros') }}" class="icon">
-            <span class="icon-symbol">🦸</span>
-            <span class="icon-text">Liste des Héros</span>
-          </a>
-        </li>
+      
       </ul>
-    </nav>
   </aside>
 
   <main>
