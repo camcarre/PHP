@@ -22,9 +22,6 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-<<<<<<< HEAD
-}
-=======
 
     protected function casts(): array
     {
@@ -34,4 +31,3 @@ class User extends Authenticatable
         ];
     }
 }
->>>>>>> 44b96ad (utilisateur login register)
