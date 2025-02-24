@@ -1,115 +1,154 @@
-* {
+:root {
+    --primary-color: #333;
+    --secondary-color: #ccc;
+    --accent-color: #666;
+    --icon-bg: #555;
+    --text-color: #fff;
+    --transition-speed: 0.3s;
+    --header-height: 60px;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  body {
     font-family: Arial, sans-serif;
     background: url("/photo/background.png") no-repeat center center fixed;
     background-size: cover;
-}
-
- header {
+    color: var(--primary-color);
+  }
+  
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ccc;
+    background-color: var(--secondary-color);
     padding: 0.5rem 1rem;
-    height: 60px;
-}
-
-.logo img {
+    height: var(--header-height);
+  }
+  
+  .logo img {
     height: 40px;
     filter: grayscale(100%);
-}
-
- .search-bar {
+  }
+  
+  .search-bar {
     flex: 1;
     max-width: 400px;
     margin: 0 1rem;
-}
-.search-bar input {
+  }
+  
+  .search-bar input {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #aaa;
     border-radius: 4px;
-}
-
- .account-btn {
-    background-color: #666;
+    transition: border-color var(--transition-speed);
+  }
+  
+  .search-bar input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .account-btn {
+    background-color: var(--accent-color);
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
- .sidebar {
+    transition: background-color var(--transition-speed);
+  }
+  
+  .account-btn:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .sidebar {
     position: fixed;
-    top: 60px;
+    top: var(--header-height);
     left: 0;
-    height: calc(100% - 60px);
+    height: calc(100% - var(--header-height));
     width: 50px;
-    background-color: #333;
-    transition: width 0.3s;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed);
     overflow: hidden;
     z-index: 999;
-}
-
-.sidebar:hover {
+  }
+  
+  .sidebar:hover {
     width: 200px;
-}
-
-.sidebar .icon {
-    color: #fff;
-    text-align: center;
-    margin: 1rem 0;
-    background: #555;
+  }
+  
+   .sidebar .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 1rem auto;
+    background: var(--icon-bg);
     width: 80%;
     height: 40px;
-    line-height: 40px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 5px;
-}
-
- .home-container {
+    transition: background-color var(--transition-speed);
+    padding: 0 10px;
+  }
+  
+   .sidebar .icon .icon-text {
+    display: none;
+    margin-left: 8px;
+  }
+  
+   .sidebar:hover .icon .icon-text {
+    display: inline;
+  }
+  
+  .home-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: var(--header-height);
     padding: 20px;
     gap: 40px;
-}
-
- .hero-wrapper {
+  }
+  
+  .hero-wrapper {
     display: flex;
     align-items: stretch;
-    border: 3px solid #000;
+    border: 3px solid var(--primary-color);
     background: rgba(255, 255, 255, 0.8);
     width: 900px;
+    max-width: 100%;
     height: 600px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
- .hero-frame {
+    transition: transform var(--transition-speed);
+  }
+  
+  .hero-wrapper:hover {
+    transform: scale(1.02);
+  }
+  
+  .hero-frame {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    border-right: 3px solid #000;
-}
-
- .hero-frame img {
+    border-right: 3px solid var(--primary-color);
+  }
+  
+  .hero-frame img {
     width: 80%;
     height: auto;
     display: block;
-}
-
- .hero-description {
+  }
+  
+  .hero-description {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -118,4 +157,16 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-}
+  }
+  
+   @media (max-width: 768px) {
+    .hero-wrapper {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .hero-frame {
+      border-right: none;
+      border-bottom: 3px solid var(--primary-color);
+    }
+  }
