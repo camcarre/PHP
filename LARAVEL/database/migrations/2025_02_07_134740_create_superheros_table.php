@@ -14,7 +14,6 @@ return new class extends Migration {
             $table->string('pouvoirs')->nullable();
             $table->string('ville_protegee')->nullable();
             $table->text('description')->nullable();
-            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

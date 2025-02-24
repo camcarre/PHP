@@ -15,24 +15,21 @@ class SuperheroController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom_reel' => 'required|string|max:100',
             'pseudo' => 'required|string|max:100',
-            'sexe' => 'required|in:Homme,Femme,Autre',
-            'description' => 'nullable|string',
-            'ville_protection_id' => 'nullable|integer',
-            'planete_origine_id' => 'nullable|integer',
-            'equipe_id' => 'nullable|integer',
+            'nom_reel' => 'required|string|max:100',
+            'planete_origine' => 'required|string|max:100',
+            'pouvoirs' => 'required|string|max:255',
+            'ville_protegee' => 'required|string|max:100',
+            'description' => 'required|string',
         ]);
 
         Superhero::create([
-            'user_id' => 1,
-            'nom_reel' => $request->nom_reel,
             'pseudo' => $request->pseudo,
-            'sexe' => $request->sexe,
+            'nom_reel' => $request->nom_reel,
+            'planete_origine' => $request->planete_origine,
+            'pouvoirs' => $request->pouvoirs,
+            'ville_protegee' => $request->ville_protegee,
             'description' => $request->description,
-            'ville_protection_id' => $request->ville_protection_id,
-            'planete_origine_id' => $request->planete_origine_id,
-            'equipe_id' => $request->equipe_id,
         ]);
 
         return redirect()->route('superheros.index')->with('success', 'Super-héros créé avec succès !');
