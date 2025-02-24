@@ -9,10 +9,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/new_hero.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-
 </head>
 <body>
-
     <header>
         <div class="logo">
             <a href="{{ url('/') }}">
@@ -31,10 +29,8 @@
         <a href="{{ url('/new-hero') }}" class="icon">✨ Nouveau Héros</a>
         <a href="{{ url('/superheros') }}" class="icon">🦸 Liste des Héros</a>
     </nav>
-
     <main>
         @yield('content')
     </main>
-
 </body>
 </html>
