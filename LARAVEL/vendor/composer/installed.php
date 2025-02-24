@@ -170,11 +170,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/broadcasting' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -182,11 +184,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/cache' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -194,11 +198,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/concurrency' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -206,11 +212,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/config' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -218,11 +226,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/container' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -230,11 +240,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/cookie' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -242,11 +254,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/encryption' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -254,11 +268,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/filesystem' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -266,11 +282,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/http' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -278,11 +296,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/macroable' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -290,11 +310,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/notifications' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -302,11 +324,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/pipeline' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -314,11 +338,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/queue' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -326,11 +352,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/routing' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -338,11 +366,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/support' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -350,11 +380,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/translation' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -362,11 +394,13 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v11.43.2',
+                0 => 'v11.43.2',
             ),
         ),
         'illuminate/view' => array(
             'dev_requirement' => false,
             'replaced' => array(
+                0 => 'v11.43.2',
                 0 => 'v11.43.2',
             ),
         ),
@@ -377,6 +411,9 @@
             ),
         ),
         'laravel/framework' => array(
+            'pretty_version' => 'v11.43.2',
+            'version' => '11.43.2.0',
+            'reference' => '99d1573698abc42222f04d25fcd5b213d0eedf21',
             'pretty_version' => 'v11.43.2',
             'version' => '11.43.2.0',
             'reference' => '99d1573698abc42222f04d25fcd5b213d0eedf21',
@@ -407,12 +444,18 @@
             'pretty_version' => 'v1.21.0',
             'version' => '1.21.0.0',
             'reference' => '531fa0871fbde719c51b12afa3a443b8f4e4b425',
+            'pretty_version' => 'v1.21.0',
+            'version' => '1.21.0.0',
+            'reference' => '531fa0871fbde719c51b12afa3a443b8f4e4b425',
             'type' => 'project',
             'install_path' => __DIR__ . '/../laravel/pint',
             'aliases' => array(),
             'dev_requirement' => true,
         ),
         'laravel/prompts' => array(
+            'pretty_version' => 'v0.3.5',
+            'version' => '0.3.5.0',
+            'reference' => '57b8f7efe40333cdb925700891c7d7465325d3b1',
             'pretty_version' => 'v0.3.5',
             'version' => '0.3.5.0',
             'reference' => '57b8f7efe40333cdb925700891c7d7465325d3b1',
@@ -431,6 +474,9 @@
             'dev_requirement' => true,
         ),
         'laravel/serializable-closure' => array(
+            'pretty_version' => 'v2.0.3',
+            'version' => '2.0.3.0',
+            'reference' => 'f379c13663245f7aa4512a7869f62eb14095f23f',
             'pretty_version' => 'v2.0.3',
             'version' => '2.0.3.0',
             'reference' => 'f379c13663245f7aa4512a7869f62eb14095f23f',
@@ -539,12 +585,18 @@
             'pretty_version' => '1.13.0',
             'version' => '1.13.0.0',
             'reference' => '024473a478be9df5fdaca2c793f2232fe788e414',
+            'pretty_version' => '1.13.0',
+            'version' => '1.13.0.0',
+            'reference' => '024473a478be9df5fdaca2c793f2232fe788e414',
             'type' => 'library',
             'install_path' => __DIR__ . '/../myclabs/deep-copy',
             'aliases' => array(),
             'dev_requirement' => true,
         ),
         'nesbot/carbon' => array(
+            'pretty_version' => '3.8.6',
+            'version' => '3.8.6.0',
+            'reference' => 'ff2f20cf83bd4d503720632ce8a426dc747bf7fd',
             'pretty_version' => '3.8.6',
             'version' => '3.8.6.0',
             'reference' => 'ff2f20cf83bd4d503720632ce8a426dc747bf7fd',
@@ -671,6 +723,9 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
+            'pretty_version' => '11.5.9',
+            'version' => '11.5.9.0',
+            'reference' => 'c91c830e7108a81e5845aeb6ba8fe3c1a4351c0b',
             'pretty_version' => '11.5.9',
             'version' => '11.5.9.0',
             'reference' => 'c91c830e7108a81e5845aeb6ba8fe3c1a4351c0b',
