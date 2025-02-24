@@ -12,6 +12,7 @@ return new class extends Migration {
             $table->string('prenom', 100);
             $table->string('email', 255)->unique();
             $table->string('password');
+            $table->string('role')->default('user');
             $table->timestamps();
         });
     }

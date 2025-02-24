@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -38,6 +39,15 @@ class AuthController extends Controller
     public function showLoginForm()
     {
         return view('superheros.login');
+=======
+use Illuminate\Support\Facades\Auth;
+
+class AuthController extends Controller
+{
+    public function showLoginForm()
+    {
+        return view('auth.login');
+>>>>>>> 44b96ad (utilisateur login register)
     }
 
     public function login(Request $request)
@@ -48,6 +58,7 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
+<<<<<<< HEAD
             return redirect()->route('superheros.index')->with('success', 'Connexion réussie !');
         }
 
@@ -60,3 +71,24 @@ class AuthController extends Controller
         return redirect()->route('login')->with('success', 'Déconnexion réussie.');
     }
 }
+=======
+            $request->session()->regenerate();
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'email' => 'Les identifiants fournis ne correspondent pas à nos enregistrements.',
+        ]);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        
+        return redirect('/');
+    }
+}
+>>>>>>> 44b96ad (utilisateur login register)

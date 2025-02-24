@@ -16,7 +16,20 @@
     <div class="search-bar">
       <input type="text" placeholder="Rechercher...">
     </div>
-    <button class="account-btn">Mon compte</button>
+    <div class="account-menu">
+        @auth
+            <button class="account-btn">Mon compte</button>
+            <form method="POST" action="{{ route('logout') }}" class="logout-form">
+                @csrf
+                <button type="submit" class="logout-btn">Déconnexion</button>
+            </form>
+        @else
+            <div class="auth-buttons">
+                <a href="{{ route('login') }}" class="login-btn">Connexion</a>
+                <a href="{{ route('register') }}" class="register-btn">Inscription</a>
+            </div>
+        @endauth
+    </div>
   </header>
 
   <aside class="sidebar">

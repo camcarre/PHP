@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #FF2D20;
+  --secondary-color: #45a049;
+  --background-color: rgba(255, 255, 255, 0.95);
+  --text-color: #333;
+  --border-color: #ddd;
+  --header-height: 60px;
+  --sidebar-width: 50px;
+  --transition-speed: 0.3s;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} 
