@@ -16,9 +16,7 @@ Route::get('/cards', function () {
     return view('cards');
 });
 
-Route::get('/new-hero', function () {
-    return view('new_hero');
-});
+Route::get('/new-hero', [SuperheroController::class, 'create'])->name('superheros.create');
 
 Route::get('/profile', function () {
     return view('profile');
