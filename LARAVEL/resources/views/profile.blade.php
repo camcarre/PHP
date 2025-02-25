@@ -5,37 +5,53 @@
 @section('content')
     <div class="profile-container">
         @auth
-            <div class="info-box" id="info-box">
-                <h2>Informations personnelles</h2>
-                <p><strong>Nom :</strong> {{ $user->nom }}</p>
-                <p><strong>Prénom :</strong> {{ $user->prenom }}</p>
-                <p><strong>Email :</strong> {{ $user->email }}</p>
-                <p><strong>Membre depuis :</strong> {{ $user->created_at->format('d/m/Y') }}</p>
-            </div>
-
-            <div class="profile-image">
-                @if($user->avatar)
-                    <img src="{{ asset('storage/' . $user->avatar) }}" alt="Photo de profil">
-                @else
-                    <img src="{{ asset('images/default-avatar.png') }}" alt="Avatar par défaut">
-                @endif
-            </div>
-
-            <div class="desc-box">
-                <div class="pseudo-box" id="pseudo-box">
-                    <h3>{{ $user->prenom }} {{ $user->nom }}</h3>
+            <div class="profile-header">
+                <div class="profile-title">
+                    <h1>{{ $user->prenom }} {{ $user->nom }}</h1>
+                    <span class="member-since">Membre depuis le {{ $user->created_at->format('d/m/Y') }}</span>
                 </div>
-                <div class="desc-content" id="desc-box">
-                    @if($user->description)
-                        {{ $user->description }}
-                    @else
-                        <p>Aucune description disponible</p>
-                    @endif
+            </div>
+
+            <div class="profile-content">
+                <div class="info-card">
+                    <div class="card-header">
+                        <h2>Informations personnelles</h2>
+                        <button class="edit-btn" title="Modifier">✏️</button>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-item">
+                            <span class="label">Nom</span>
+                            <span class="value">{{ $user->nom }}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Prénom</span>
+                            <span class="value">{{ $user->prenom }}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email</span>
+                            <span class="value">{{ $user->email }}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-header">
+                        <h2>À propos de moi</h2>
+                        <button class="edit-btn" title="Modifier">✏️</button>
+                    </div>
+                    <div class="card-content">
+                        @if($user->description)
+                            <p class="description">{{ $user->description }}</p>
+                        @else
+                            <p class="description empty">Aucune description disponible</p>
+                        @endif
+                    </div>
                 </div>
             </div>
         @else
-            <div class="alert alert-warning">
-                Veuillez vous <a href="{{ route('login') }}">connecter</a> pour voir votre profil.
+            <div class="auth-message">
+                <h2>Accès restreint</h2>
+                <p>Veuillez vous <a href="{{ route('login') }}">connecter</a> pour voir votre profil.</p>
             </div>
         @endauth
     </div>

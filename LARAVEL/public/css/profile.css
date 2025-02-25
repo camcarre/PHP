@@ -8,135 +8,191 @@ body {
     font-family: Arial, sans-serif;
     background: url("/photo/background.png") no-repeat center center fixed;
     background-size: cover;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ccc;
-    padding: 0.5rem 1rem;
-    height: 60px;
-}
-
-.logo img {
-    height: 40px;
-    filter: grayscale(100%);
-}
-
-.search-bar {
-    flex: 1;
-    max-width: 400px;
-    margin: 0 1rem;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-}
-
-.account-btn {
-    background-color: #666;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    height: calc(100% - 60px);
-    width: 50px;
-    background-color: #333;
-    transition: width 0.3s;
-    overflow: hidden;
-    z-index: 999;
-}
-
-.sidebar:hover {
-    width: 200px;
-}
-
-.sidebar .icon {
-    color: #fff;
-    text-align: center;
-    margin: 1rem 0;
-    background: #555;
-    width: 80%;
-    height: 40px;
-    line-height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
+    grid-template-columns: 100px 1fr;
 }
 
 .profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    padding: 20px;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.profile-image img {
-    width: 500px; 
-    height: auto;
-    display: block;
-    border: 3px solid #000;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    background: url("hero1.webp") no-repeat center center;
-    background-size: cover;
-}
-
-.profile-image img {
-    width: 500px; 
-    height: auto;
-    display: block;
-    border: 3px solid #000;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.info-box, .desc-box {
-    flex: 1;
-    max-width: 250px;
-    background: rgba(255, 255, 255, 0.95);
+.profile-header {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
-    padding: 15px;
-    border: 2px solid #000;
     text-align: center;
-    font-weight: bold;
 }
 
-.pseudo-box {
-    margin-bottom: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px;
-    font-weight: bold;
+.profile-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-.desc-content {
-    padding: 10px;
+.member-since {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.profile-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
     background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #000;
+    color: #fff;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 600;
+    color: #666;
+}
+
+.value {
+    color: #333;
+}
+
+.description {
+    line-height: 1.6;
+    color: #333;
+}
+
+.description.empty {
+    color: #666;
+    font-style: italic;
+}
+
+.auth-message {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.auth-message h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.auth-message a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column;
-        align-items: center;
+    .profile-header {
+        padding: 1.5rem;
     }
 
-    .profile-image img {
-        width: 350px; 
+    .profile-title h1 {
+        font-size: 2rem;
     }
 
-    .info-box, .desc-box {
-        max-width: 90%;
+    .info-card {
+        margin-bottom: 1.5rem;
     }
+}
+
+main {
+    margin-left: 100px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    bottom: 0;
+    width: 100px;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 900;
+    padding: 2rem 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar li {
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar .icon {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 0.8rem 0;
+}
+
+.sidebar .icon-symbol {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar .icon-text {
+    display: none;
 }

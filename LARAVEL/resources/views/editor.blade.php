@@ -4,10 +4,10 @@
 
 @section('content')
     @if($heroes->isEmpty())
-        <div style="text-align: center; padding: 20px;">
+        <div class="empty-state">
             <h2>Aucun super-héros disponible</h2>
             <p>Commencez par en créer un !</p>
-            <a href="{{ route('superheros.create') }}" class="btn btn-primary">Créer un héros</a>
+            <a href="{{ route('superheros.create') }}" class="btn-primary">Créer un héros</a>
         </div>
     @else
         <div class="tinder-container">

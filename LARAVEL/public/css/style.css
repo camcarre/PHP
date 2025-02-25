@@ -11,9 +11,22 @@ body {
     background: url("/photo/background.png") no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main";
+    grid-template-columns: var(--sidebar-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr;
+    min-height: 100vh;
 }
 
 header {
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -81,39 +94,9 @@ header {
     box-shadow: var(--box-shadow);
 }
 
-.sidebar {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    height: calc(100vh - var(--header-height));
-    width: var(--sidebar-width);
-    background: var(--background-color);
-    transition: width var(--transition-speed);
-    overflow: hidden;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--box-shadow);
-}
-
-.sidebar:hover {
-    width: 200px;
-}
-
-.sidebar .icon {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: background var(--transition-speed);
-}
-
-.sidebar .icon:hover {
-    background: rgba(0, 0, 0, 0.05);
-}
-
 main {
-    margin-left: var(--sidebar-width);
+    grid-area: main;
+    margin-top: var(--header-height);
     padding: 2rem;
     min-height: calc(100vh - var(--header-height));
 }
@@ -133,11 +116,6 @@ main {
     background-color: #fff;
     border: 2px solid #000;
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    overflow: hidden;
 }
 
 .card::before {
@@ -217,4 +195,43 @@ main {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(10px);
+}
+
+.empty-state {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.empty-state h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.empty-state p {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: #000;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }

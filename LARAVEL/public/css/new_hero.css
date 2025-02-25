@@ -10,71 +10,6 @@ body {
     background-size: cover;
 }
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #ccc;
-    padding: 0.5rem 1rem;
-    height: 60px;
-}
-
-.logo img {
-    height: 40px;
-    filter: grayscale(100%);
-}
-
-.search-bar {
-    flex: 1;
-    max-width: 400px;
-    margin: 0 1rem;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-}
-
-.account-btn {
-    background-color: #666;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.sidebar {
-    position: fixed;
-    top: 60px;
-    left: 0;
-    height: calc(100% - 60px);
-    width: 50px;
-    background-color: #333;
-    transition: width 0.3s;
-    overflow: hidden;
-    z-index: 999;
-}
-
-.sidebar:hover {
-    width: 200px;
-}
-
-.sidebar .icon {
-    color: #fff;
-    text-align: center;
-    margin: 1rem 0;
-    background: #555;
-    width: 80%;
-    height: 40px;
-    line-height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-}
-
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr 1fr;
@@ -198,146 +133,141 @@ textarea {
     }
 }
 
+.content-wrapper {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
 .create-hero-container {
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 2rem;
-}
-
-.form-group {
-    background-color: white !important;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-    background-color: white;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: white;
-}
-
-.page-title {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.info-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.submit-container {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-    text-align: center;
-}
-
-.image-upload-container {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 10px;
-}
-
- .white-background {
-    background-color: white !important;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.form-layout {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 2rem;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .form-section {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 2rem;
+}
+
+.page-title {
+    color: #333;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #000;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
-    background: rgba(255, 255, 255, 0.98);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .form-group label {
     display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
     margin-bottom: 0.5rem;
-    font-weight: bold;
-    background: rgba(255, 255, 255, 0.98);
-    padding: 0.5rem;
-    border-radius: 4px;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
 }
 
-.page-title {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 1rem;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.image-upload-container {
+    background: #f8f9fa;
+    padding: 2rem;
     border-radius: 8px;
-    margin-bottom: 2rem;
+    border: 2px dashed #ddd;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.image-upload-container:hover {
+    border-color: #000;
+    background: #fff;
+}
+
+.image-input {
+    display: none;
+}
+
+.image-upload-label {
+    cursor: pointer;
+    display: block;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.upload-text {
+    color: #666;
+    font-size: 1rem;
+}
+
+.image-preview {
+    margin-top: 1rem;
+    max-width: 300px;
+    margin: 1rem auto 0;
+}
+
+.image-preview img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .submit-container {
-    background: rgba(255, 255, 255, 0.98);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-top: 1rem;
     text-align: center;
+    margin-top: 2rem;
 }
 
 .submit-btn {
-    background: #4CAF50;
+    background: #000;
     color: white;
-    padding: 0.8rem 2rem;
     border: none;
-    border-radius: 4px;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .create-hero-container {
+        margin: 1rem;
+    }
+    
+    .form-section {
+        padding: 1rem;
+    }
 }

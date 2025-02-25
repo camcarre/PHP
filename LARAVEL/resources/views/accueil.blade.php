@@ -66,10 +66,10 @@
     <section class="home-container">
       <article class="hero-wrapper">
         <figure class="hero-frame">
-          <img src="{{ asset('images/hero1.webp') }}" alt="Super-Héros">
+          <img src="{{ asset('photo/hero1.webp') }}" alt="Super-Héros">
         </figure>
         <div class="hero-description">
-          <p>Bienvenue dans l'univers des héros !</p>
+          <p>Bienvenue dans l'univers des héros ! Découvrez des personnages extraordinaires aux pouvoirs exceptionnels.</p>
         </div>
       </article>
     </section>

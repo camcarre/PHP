@@ -14,7 +14,7 @@
     <header>
         <div class="logo">
             <a href="{{ url('/') }}">
-                <img src="{{ asset('photo/logo.png') }}" alt="SuperHeros Logo" class="logo-img">
+                <img src="/photo/logo.png" alt="Logo" class="logo-img">
             </a>
         </div>
         <div class="search-bar">
@@ -27,10 +27,16 @@
                     @csrf
                     <button type="submit" class="logout-btn">Déconnexion</button>
                 </form>
+            @else
+                <div class="auth-buttons">
+                    <a href="{{ route('login') }}" class="login-btn">Connexion</a>
+                    <a href="{{ route('register') }}" class="register-btn">Inscription</a>
+                </div>
             @endauth
         </div>
     </header>
-    <nav class="sidebar">
+
+    <aside class="sidebar">
         <ul>
             <li>
                 <a href="{{ url('/') }}" class="icon">
@@ -57,7 +63,8 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </aside>
+
     <main>
         @yield('content')
     </main>
