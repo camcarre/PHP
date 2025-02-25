@@ -1,36 +1,72 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
-            @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @isset($header)
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endisset
-
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'SuperHeros')</title>
+    <link rel="stylesheet" href="{{ asset('css/accueil.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/hero_editor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/new_hero.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url('/') }}">
+                <img src="/photo/logo.png" alt="Logo" class="logo-img">
+            </a>
         </div>
-    </body>
+        <div class="search-bar">
+            <input type="text" placeholder="Rechercher...">
+        </div>
+        <div class="account-menu">
+            @auth
+                <button class="account-btn">Mon compte</button>
+                <form method="POST" action="{{ route('logout') }}" class="logout-form">
+                    @csrf
+                    <button type="submit" class="logout-btn">Déconnexion</button>
+                </form>
+            @else
+                <div class="auth-buttons">
+                    <a href="{{ route('login') }}" class="login-btn">Connexion</a>
+                    <a href="{{ route('register') }}" class="register-btn">Inscription</a>
+                </div>
+            @endauth
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li>
+                <a href="{{ url('/') }}" class="icon">
+                    <span class="icon-symbol">🏠</span>
+                    <span class="icon-text">Accueil</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('/profile') }}" class="icon">
+                    <span class="icon-symbol">👤</span>
+                    <span class="icon-text">Profil</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('/editor') }}" class="icon">
+                    <span class="icon-symbol">🦸</span>
+                    <span class="icon-text">Liste des Héros</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url('/new-hero') }}" class="icon">
+                    <span class="icon-symbol">✨</span>
+                    <span class="icon-text">Nouveau Héros</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main>
+        @yield('content')
+    </main>
+</body>
 </html>
